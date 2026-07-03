@@ -1,0 +1,359 @@
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: block;            
+  scroll-behavior: smooth;   
+}
+
+/* First page */
+.firstpage {
+  background-color: #151212;
+  min-height: 100vh;          
+  scroll-snap-align: start;   
+  padding: 20px;
+}
+
+/* Navigation bar */
+#navigation {
+  background-image: url(https://images.stockcake.com/public/a/d/2/ad29ae6e-6e08-47d9-986a-c6bbe58d35bd/giraffe-golden-hour-stockcake.jpg);
+  height: 300px;
+  width: 100%;               
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#navigation h1 {
+  color: rgb(199, 168, 55); 
+  margin-left: 100px;
+}
+
+#navigation h2 {
+  color: rgb(83, 75, 75);
+  display: flex;
+  text-align: center;
+  flex-direction: column;   
+  justify-content: flex-end; 
+  font-style: italic;
+  font-size: 3em; 
+  margin-top: 218px;
+}
+
+#content {
+  text-align: center;
+  color: rgb(233, 229, 229);
+}
+
+/* Countries grid */
+
+.countries {
+  display: grid;                       
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;                       
+  justify-items: center;               
+  align-items: center;                  
+  margin-top: 20px;
+}
+
+/* Language cards (shared style) */
+.countries div {
+  border-radius: 40px;
+  color: white;
+  display: flex;
+  flex-direction: column;   
+  justify-content: center;  
+  align-items: center;  
+  height: 200px;
+  width: 200px;
+  background-color: rgba(158, 134, 134, 0.304);
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.countries div:hover {
+  background-color: #ff6600;   
+  transform: scale(1.05);      
+  cursor: pointer;             
+  color: #fff;                
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3); 
+}
+
+/* Plan button */
+.plan {
+  background-color: orange;
+  height: 40px;
+  width: 400px;
+  color: white;
+  text-align: center;
+  border-radius: 30px;
+  margin: 40px auto;           /* center horizontally */
+  display: flex;
+  justify-content: center;  
+  align-items: center; 
+}
+
+/* QR box */
+.qr {
+  position: absolute;
+  top: 840px;
+  left: 20px;
+  width: 250px;
+  background-color: #877c7c;
+  color: #050101;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.qr img {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+#infokiosk {
+  background-color: #877c7c;
+  width: 300px;
+  height: 50px;
+  color: white;
+  border-radius: 20px;
+  margin: 40px auto;           
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+}
+
+footer {
+  color: #877c7c;
+  text-align: center;
+  margin-top: 60px;
+}
+
+
+#secondpage {
+  background-color: #0a0808;
+  min-height: 100vh;          
+  scroll-snap-align: start;   
+  padding: 20px;
+}
+/* Hero Section */
+.hero {
+  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPzI3bqnsV8kNL0Vt1fVNCvx-AQedeQZHQhA&s) no-repeat center center/cover;
+  text-align: center;
+  padding: 120px 20px 80px;
+}
+
+.hero .title {
+  font-size: 3.5em;
+  margin: 0;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #d4ac0d;
+}
+
+.hero .subtitle {
+  font-size: 2.8em;
+  margin: 20px 0 10px;
+  color: #f4d03f; 
+}
+
+.hero .description {
+  max-width: 700px;
+  margin: 20px auto 0;
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #fff;
+}
+
+/* Landscapes Section */
+.landscapes {
+  padding: 60px 20px;
+  background-color: #111;
+}
+
+.section-heading {
+  text-align: center;
+  font-size: 2.2em;
+  margin-bottom: 40px;
+  color: #f4d03f;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Cards */
+.card {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYNwn6Nwr-Qa7RVDm8Cs5OmBYvU29X4Sl6ng&s);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+   background-size: cover;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+.card h3 {
+  margin: 15px 0 10px;
+  font-size: 1.6em;
+  color: #f4d03f;
+}
+
+.card p {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+.card button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #f4d03f;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.card button:hover {
+  background-color: #d4ac0d;
+}
+
+
+.card1 {
+    background-image: url(https://static.wixstatic.com/media/d9407f_d78d58f2ddaf4fca93939cb27333ff4e~mv2.jpg/v1/fill/w_1000,h_667,al_c,q_85,usm_0.66_1.00_0.01/d9407f_d78d58f2ddaf4fca93939cb27333ff4e~mv2.jpg);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+   background-size: cover;
+   transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+.card h3 {
+  margin: 15px 0 10px;
+  font-size: 1.6em;
+  color: #f4d03f;
+}
+
+.card p {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+.card button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #f4d03f;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.card button:hover {
+  background-color: #d4ac0d;
+}
+
+
+.card2 {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAzXX2IIsi2eN9O_NGne4cL2xKtI9mkhIAkQ&s);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+   background-size: cover;
+   transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+.card h3 {
+  margin: 15px 0 10px;
+  font-size: 1.6em;
+  color: #f4d03f;
+}
+
+.card p {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+.card button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #f4d03f;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.card button:hover {
+  background-color: #d4ac0d;
+}
+
+
+
+
+.card3 {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLt-9p2oTbG6eJB2IFfpfhqmuaYN-FBSODow&s);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-size: cover;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+.card h3 {
+  margin: 15px 0 10px;
+  font-size: 1.6em;
+  color: #f4d03f;
+}
+
+.card p {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+.card button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #f4d03f;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.card button:hover {
+  background-color: #d4ac0d;
+}

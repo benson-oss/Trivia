@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    .choices {
+      margin: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background: #007BFF;
+      color: white;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .score {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Rock Paper Scissors</h1>
+  
+  <div class="choices">
+    <button onclick="playGame('rock')">🪨 Rock</button>
+    <button onclick="playGame('paper')">📄 Paper</button>
+    <button onclick="playGame('scissors')">✂️ Scissors</button>
+  </div>
+  
+  <div class="result" id="result"></div>
+  <div class="score" id="score">Player: 0 | Computer: 0</div>
+
+  <script>
+    const choices = ["rock", "paper", "scissors"];
+    let playerScore = 0;
+    let computerScore = 0;
+
+    function getComputerChoice() {
+      const randomIndex = Math.floor(Math.random() * choices.length);
+      return choices[randomIndex];
+    }
+
+    function playRound(playerChoice, computerChoice) {
+      if (playerChoice === computerChoice) {
+        return "It's a draw!";
+      }
+      if (
+        (playerChoice === "rock" && computerChoice === "scissors") ||
+        (playerChoice === "paper" && computerChoice === "rock") ||
+        (playerChoice === "scissors" && computerChoice === "paper")
+      ) {
+        playerScore++;
+        return "You win!";
+      } else {
+        computerScore++;
+        return "Computer wins!";
+      }
+    }
+
+    function playGame(playerChoice) {
+      const computerChoice = getComputerChoice();
+      const resultText = playRound(playerChoice, computerChoice);
+      document.getElementById("result").innerText =
+        `You chose ${playerChoice}, Computer chose ${computerChoice}. ${resultText}`;
+      document.getElementById("score").innerText =
+        `Player: ${playerScore} | Computer: ${computerScore}`;
+    }
+  </script>
+</body>
+</html>
